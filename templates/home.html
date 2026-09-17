@@ -1,0 +1,11 @@
+{% extends './myTheme.html' %}
+{% block content %}
+    {% for course in courses  %}
+        <h2>Course ID : {{course["id"]}}</h2>
+        <p>Name of Course {{course["course"]}}</p>
+        <p>Total Semester : {{course["semester"]}}</p>
+        <p>List of Subjects : {{course["subjects"]}}</p>
+        <hr>
+    {% endfor %}    
+{% endblock content %}
+    

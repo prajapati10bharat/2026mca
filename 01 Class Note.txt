@@ -1,0 +1,59 @@
+taskkill /F /IM python.exe
+- Make Dictionary 
+courses_list = [
+    {
+        "id": 1,
+        "name": "MCA",
+        "subject": "FastAPI,Research Methodology",
+        "semester": 4,
+    },
+    {
+        "id": 2,
+        "name": "B.Sc.IT",
+        "subject": "C, C++, Java",
+        "semester": 8,
+    },
+    {
+        "id": 3,
+        "name": "B.Sc.IT(CS)",
+        "subject": "Linux, Server, Python",
+        "semester": 6,
+    },
+]
+
+- pip install jinja2
+- pip list
+- from fastapi import FastAPI, Request
+- from fastapi.templating import Jinja2Templates
+- Create new folder templates
+- templates = Jinja2Templates(directory="./templates")
+- Create home.html 
+- Jinja2 Snippet Kit // Optional 
+- Update Code 
+main.py
+def home(reqeust: Request):
+    return templates.TemplateResponse(reqeust, "home.html", {"courses": courses_list})
+
+home.html
+{% for course in courses %}
+        <h2>ID : {{course.id}}</h2>
+        <p>Course Name : {{course.name}}</p>
+        <p>Semester : {{course.semester}}</p>
+        <p>Subjects : {{course.subject}}</p>
+    {% endfor %}
+
+- taskkill /F /IM python.exe
+
+- Create myTheme.html inside Templates folder 
+  	{% block content %}
+		// Block of Dynamic Code 
+	{% endblock content %}
+- Extend the home.html page 
+	{% extends './myTheme.html' %}
+		{% for course in courses %}
+			// Call the dynamic Block of Code 
+		{% endblock content %}
+- Add Bootstrap for responsive UI
+
+
+
