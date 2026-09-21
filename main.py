@@ -23,6 +23,12 @@ courses_list = [
         "semester": 6,
         "subjects": "Linux, Server, Virtual Machine, Python",
     },
+    {
+        "id": 4,
+        "course": "MscIT(AI&ML)",
+        "semester": 4,
+        "subjects": "Python, Research Methodology, Matplotlib,SPSS, R Programming",
+    },
 ]
 
 # add path of Templates

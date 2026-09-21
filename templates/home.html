@@ -1,11 +1,66 @@
-{% extends './myTheme.html' %}
-{% block content %}
-    {% for course in courses  %}
-        <h2>Course ID : {{course["id"]}}</h2>
-        <p>Name of Course {{course["course"]}}</p>
-        <p>Total Semester : {{course["semester"]}}</p>
-        <p>List of Subjects : {{course["subjects"]}}</p>
-        <hr>
-    {% endfor %}    
+{% extends './myTheme.html' %} {% block content %}
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Course ID</th>
+      <th scope="col">Name of Course</th>
+      <th scope="col">Total Semester</th>
+      <th scope="col">List of Subjects</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in courses %}
+    <tr>
+      <th scope="row" style="text-align: center">{{course["id"]}}</th>
+      <td>{{course["course"]}}</td>
+      <td style="text-align: center">{{course["semester"]}}</td>
+      <td>{{course["subjects"]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<div class="table-responsive">
+  <table class="table table-warning">
+    <tbody>
+      <tr class="">
+        <td scope="row">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+        </td>
+        <td>
+           <button type="button" class="btn btn-success">Success</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger">Danger</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-warning">Warning</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-info">Info</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-light">Light</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-dark">Dark</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-link">
+            Link
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
 {% endblock content %}
-    
