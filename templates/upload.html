@@ -1,0 +1,18 @@
+{% extends './myTheme.html' %}
+{% block content %}
+    <div class="card">
+        {# Header Section  #}
+        <div class="card-header">
+            <h1>Upload File </h1>
+        </div>
+        {# Body Section   #}
+        <div class="card-body">
+            <form action="http://127.0.0.1:8000/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <button type="submit">Upload File</button>
+            </form>
+        </div>
+        
+    </div>
+    
+{% endblock %}
